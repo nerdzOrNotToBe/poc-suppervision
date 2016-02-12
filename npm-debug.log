@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/home/dlebel/.node/bin/npm', 'start' ]
+2 info using npm@2.11.0
+3 info using node@v0.12.9
+4 verbose node symlink /usr/bin/node
+5 verbose stack Error: Failed to parse json
+5 verbose stack Unexpected token ',' at 12:32
+5 verbose stack     "angular2": "2.0.0-beta.3"n,
+5 verbose stack                                ^
+5 verbose stack     at parseError (/home/dlebel/.node/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+5 verbose stack     at parseJson (/home/dlebel/.node/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+5 verbose stack     at /home/dlebel/.node/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+5 verbose stack     at evalmachine.<anonymous>:334:14
+5 verbose stack     at /home/dlebel/.node/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+5 verbose stack     at FSReqWrap.oncomplete (evalmachine.<anonymous>:95:15)
+6 verbose cwd /home/dlebel/source/git/poc-suppervision
+7 error Linux 4.2.0-27-generic
+8 error argv "node" "/home/dlebel/.node/bin/npm" "start"
+9 error node v0.12.9
+10 error npm  v2.11.0
+11 error file /home/dlebel/source/git/poc-suppervision/package.json
+12 error code EJSONPARSE
+13 error Failed to parse json
+13 error Unexpected token ',' at 12:32
+13 error     "angular2": "2.0.0-beta.3"n,
+13 error                                ^
+14 error File: /home/dlebel/source/git/poc-suppervision/package.json
+15 error Failed to parse package.json data.
+15 error package.json must be actual JSON, not just JavaScript.
+15 error
+15 error This is not a bug in npm.
+15 error Tell the package author to fix their package.json file. JSON.parse
+16 verbose exit [ 1, true ]
