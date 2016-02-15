@@ -3,10 +3,11 @@
  */
 import {Component} from "angular2/core";
 import {View} from "angular2/core";
+import {ROUTER_DIRECTIVES} from 'angular2/router';
+
 @Component({
-    selector:'menu'
-})
-@View({
+    selector:'menu',
+    directives: [ROUTER_DIRECTIVES],
     templateUrl:'app/leftmenu/template.html'
 })
 
