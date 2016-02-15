@@ -23,7 +23,7 @@
     var options = $.extend({}, defaults, option);
     var isFocused = false;
 
-    // Dropdown menu
+    // Dropdown leftmenu
     var activates = $("#"+ origin.attr('data-activates'));
 
     function updateOptions() {
@@ -193,12 +193,12 @@
             e.preventDefault(); // Prevents button click from moving window
             placeDropdown('click');
           }
-          // If origin is clicked and menu is open, close menu
+          // If origin is clicked and leftmenu is open, close leftmenu
           else if (origin.hasClass('active')) {
             hideDropdown();
             $(document).unbind('click.'+ activates.attr('id') + ' touchstart.' + activates.attr('id'));
           }
-          // If menu open, add click close handler to document
+          // If leftmenu open, add click close handler to document
           if (activates.hasClass('active')) {
             $(document).bind('click.'+ activates.attr('id') + ' touchstart.' + activates.attr('id'), function (e) {
               if (!activates.is(e.target) && !origin.is(e.target) && (!origin.find(e.target).length) ) {

@@ -1050,7 +1050,7 @@ DatePicker.prototype.nodes = function( isOpen ) {
               monthsCollection = settings.monthsShort;
             }
 
-            // If there are months to select, add a dropdown menu.
+            // If there are months to select, add a dropdown leftmenu.
             if ( settings.selectMonths  && override == undefined) {
 
                 return _.node( 'select',
@@ -1107,7 +1107,7 @@ DatePicker.prototype.nodes = function( isOpen ) {
             // divide in half to get half before and half after focused year.
             numberYears = settings.selectYears === true ? 5 : ~~( settings.selectYears / 2 )
 
-            // If there are years to select, add a dropdown menu.
+            // If there are years to select, add a dropdown leftmenu.
             if ( numberYears ) {
 
                 var

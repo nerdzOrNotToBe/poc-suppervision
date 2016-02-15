@@ -33,7 +33,7 @@
           dragTarget.css({'right': 0}); // Add Touch Area
         }
 
-        // If fixed sidenav, bring menu out
+        // If fixed sidenav, bring leftmenu out
         if (menu_id.hasClass('fixed')) {
             if (window.innerWidth > 992) {
               menu_id.css('left', 0);
@@ -44,7 +44,7 @@
         if (menu_id.hasClass('fixed')) {
           $(window).resize( function() {
             if (window.innerWidth > 992) {
-              // Close menu if window is resized bigger than 992 and user has fixed sidenav
+              // Close leftmenu if window is resized bigger than 992 and user has fixed sidenav
               if ($('#sidenav-overlay').css('opacity') !== 0 && menuOut) {
                 removeMenu(true);
               }
@@ -142,7 +142,7 @@
             // Disable Scrolling
             $('body').css('overflow', 'hidden');
 
-            // If overlay does not exist, create one and if it is clicked, close menu
+            // If overlay does not exist, create one and if it is clicked, close leftmenu
             if ($('#sidenav-overlay').length === 0) {
               var overlay = $('<div id="sidenav-overlay"></div>');
               overlay.css('opacity', 0).click( function(){
@@ -203,7 +203,7 @@
             var velocityX = e.gesture.velocityX;
             panning = false;
             if (options.edge === 'left') {
-              // If velocityX <= 0.3 then the user is flinging the menu closed so ignore menuOut
+              // If velocityX <= 0.3 then the user is flinging the leftmenu closed so ignore menuOut
               if ((menuOut && velocityX <= 0.3) || velocityX < -0.5) {
                 menu_id.velocity({left: 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
                 $('#sidenav-overlay').velocity({opacity: 1 }, {duration: 50, queue: false, easing: 'easeOutQuad'});
@@ -212,7 +212,7 @@
               else if (!menuOut || velocityX > 0.3) {
                 // Enable Scrolling
                 $('body').css('overflow', '');
-                // Slide menu closed
+                // Slide leftmenu closed
                 menu_id.velocity({left: -1 * (options.menuWidth + 10)}, {duration: 200, queue: false, easing: 'easeOutQuad'});
                 $('#sidenav-overlay').velocity({opacity: 0 }, {duration: 200, queue: false, easing: 'easeOutQuad',
                   complete: function () {
@@ -230,7 +230,7 @@
               else if (!menuOut || velocityX < -0.3) {
                 // Enable Scrolling
                 $('body').css('overflow', '');
-                // Slide menu closed
+                // Slide leftmenu closed
                 menu_id.velocity({right: -1 * (options.menuWidth + 10)}, {duration: 200, queue: false, easing: 'easeOutQuad'});
                 $('#sidenav-overlay').velocity({opacity: 0 }, {duration: 200, queue: false, easing: 'easeOutQuad',
                   complete: function () {

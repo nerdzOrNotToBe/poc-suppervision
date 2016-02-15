@@ -131,16 +131,16 @@ $(function() {
   });
 
   // FULL SCREEN MENU (Layout 02)
-  $('.menu-sidebar-collapse').sideNav({
+  $('.leftmenu-sidebar-collapse').sideNav({
         menuWidth: 240,
         edge: 'left', // Choose the horizontal origin     
-        //closeOnClick:true, // Set if default menu open is true
-        menuOut:false // Set if default menu open is true
+        //closeOnClick:true, // Set if default leftmenu open is true
+        menuOut:false // Set if default leftmenu open is true
         
       });
 
   // HORIZONTAL MENU (Layout 03)
-  $('.dropdown-menu').dropdown({
+  $('.dropdown-leftmenu').dropdown({
       inDuration: 300,
       outDuration: 225,
       constrain_width: false, // Does not change width of dropdown to that of the activator
