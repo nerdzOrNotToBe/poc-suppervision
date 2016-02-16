@@ -4,11 +4,13 @@
 import {Component} from "angular2/core";
 import {View} from "angular2/core";
 import {StandardItem} from "app/gridster/standardItem";
+import {Kibana} from "../widget/iframe.component";
 declare var jQuery:JQueryStatic;
 
 @Component({
     selector:'gridster',
     templateUrl:'app/gridster/template.html',
+    directives: [Kibana]
 })
 
 export class Gridster{
@@ -20,22 +22,7 @@ export class Gridster{
     constructor(){
         this.options = {
         };
-        this.standardItems = [
-            {
-                col: 1,
-                row: 1,
-                sizeY: 1,
-                sizeX: 2,
-                name: "Other Widget 1"
-            }, {
-                col: 1,
-                row: 3,
-                sizeY: 1,
-                sizeX: 1,
-                name: "Other Widget 2"
-            }
-        ];
-
+        this.standardItems = new Array();
         this.listWidget =  [
             {
                 name:'Top-5-Country-(Distribution-per-day)',
@@ -75,14 +62,20 @@ export class Gridster{
         var i = this.standardItems.push({
             col: 1,
             row: 1,
-            sizeY: 3,
+            sizeY: 6,
             sizeX: 4,
-            name: widget.name
+            name: widget.name,
+            url: widget.src
         });
+        this.transformToWidget(i);
+    }
+    transformToWidget(i: number){
         setTimeout(function(){
             var grid = $('.grid-stack').data('gridstack');
-            console.log('grid-'+(i-1));
-            grid.make_widget('grid-'+(i-1));
-        },1000)
+            var widget = grid.make_widget('#grid-'+(i-1));
+            if(!widget){
+                this.transformToWidget(i);
+            }
+        },100);
     }
 }
