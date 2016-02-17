@@ -20,9 +20,8 @@ export class Gridster{
     selected:any;
 
     constructor(){
-        this.options = {
-        };
-        this.standardItems = new Array();
+        this.options = {};
+        this.standardItems = [];
         this.listWidget =  [
             {
                 name:'Top-5-Country-(Distribution-per-day)',
@@ -43,6 +42,14 @@ export class Gridster{
                 name:'Number-of-documents-published',
                 type:"iframe",
                 src:"http://cbox-kibana.spotter.com/app/kibana#/visualize/edit/Data:-Number-of-documents-published?embed&_g=(filters:!(),refreshInterval:(display:'5%20minutes',pause:!f,section:2,value:300000),time:(from:now%2Fy,mode:quick,to:now))&_a=(filters:!(),linked:!t,query:(query_string:(query:'*')),vis:(aggs:!((id:'1',params:(),schema:metric,type:count)),listeners:(),params:(fontSize:60),type:metric))"
+            },
+            {
+                name:'Custom',
+                type:"custom"
+            },
+            {
+                name:'Custom2',
+                type:"custom"
             }
         ]
     }
@@ -67,8 +74,10 @@ export class Gridster{
             name: widget.name,
             url: widget.src
         });
+
         this.transformToWidget(i);
     }
+
     transformToWidget(i: number){
         setTimeout(function(){
             var grid = $('.grid-stack').data('gridstack');
