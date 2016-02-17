@@ -3,8 +3,8 @@
  */
 import {Component} from "angular2/core";
 import {View} from "angular2/core";
-import {TopHeader} from "app/topheader/topheader.component";
-import { SearchService } from 'app/service/search.service';
+import {TopHeader} from "../topheader/topheader.component";
+import { SearchService } from '../service/search.service';
 declare var jQuery:JQueryStatic;
 
 @Component({

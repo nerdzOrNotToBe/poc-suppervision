@@ -7,4 +7,6 @@ export interface StandardItem{
     row: number;
     col: number;
     name:string;
+    url:string;
+    type:string;
 }

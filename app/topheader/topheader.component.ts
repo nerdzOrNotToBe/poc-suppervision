@@ -1,5 +1,5 @@
 import {Component} from "angular2/core";
-import {SearchService} from "app/service/search.service"
+import {SearchService} from "../service/search.service"
 
 @Component({
     selector:'top-header',

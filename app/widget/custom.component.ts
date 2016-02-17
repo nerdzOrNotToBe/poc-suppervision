@@ -3,7 +3,7 @@
  */
 import {Component,Input} from 'angular2/core';
 import {Http} from 'angular2/http';
-import { SearchService } from 'app/service/search.service';
+import { SearchService } from '../service/search.service';
 @Component({
     selector:'custom',
     templateUrl:'app/widget/customTemplate.html'
