@@ -5,12 +5,13 @@ import {Component} from "angular2/core";
 import {View} from "angular2/core";
 import {StandardItem} from "app/gridster/standardItem";
 import {Kibana} from "../widget/iframe.component";
+import {Custom} from "../widget/custom.component";
 declare var jQuery:JQueryStatic;
 
 @Component({
     selector:'gridster',
     templateUrl:'app/gridster/template.html',
-    directives: [Kibana]
+    directives: [Kibana, Custom]
 })
 
 export class Gridster{
@@ -72,7 +73,8 @@ export class Gridster{
             sizeY: 6,
             sizeX: 4,
             name: widget.name,
-            url: widget.src
+            url: widget.src,
+            type: widget.type
         });
 
         this.transformToWidget(i);

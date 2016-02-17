@@ -6,7 +6,7 @@ import {SearchService} from "app/service/search.service"
     templateUrl:'app/topheader/template.html',
 })
 
-export class TopHeader implements AfterViewChecked{
+export class TopHeader{
     search: string;
 
     constructor(private _searchService: SearchService){

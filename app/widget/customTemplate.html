@@ -1,0 +1,18 @@
+<table class="striped">
+	<thead>
+		<tr>
+			<th data-field="id">Name</th>
+			<th data-field="name">Count</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="#d of data; #i = index">
+			<td>{{d.key}}</td>
+			<td>{{d.doc_count}}</td>
+			<td>
+				<a class="btn-floating btn-flat waves-effect waves-light pink accent-2 white-text"><i class="mdi-communication-call"></i></a>
+				<a class="btn-floating btn-flat waves-effect waves-light pink accent-2 white-text"><i class="mdi-communication-call-end"></i></a>
+			</td>
+		</tr>
+	</tbody>
+</table>

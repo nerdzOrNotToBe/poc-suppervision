@@ -8,6 +8,7 @@ import 'rxjs/add/operator/share';
 @Injectable()
 export class SearchService{
     value$: Observable<string>;
+    private _searchObserver: any;
     constructor(){
          this.value$ = new Observable(observer =>
             this._searchObserver = observer).share();
