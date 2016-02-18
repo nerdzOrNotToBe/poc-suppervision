@@ -9,7 +9,7 @@ declare var jQuery:JQueryStatic;
 
 @Component({
     selector:'kibana',
-    template: `<iframe [src]="url" [attr.id]="'iframe'+index" style="height: 95%;width: 100%"></iframe>`
+    template: `<iframe [src]="url" [attr.id]="'iframe'+index" style="height: 95%;width: 100%" frameBorder="0"></iframe>`
 })
 
 export class Kibana{

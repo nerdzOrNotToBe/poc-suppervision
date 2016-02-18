@@ -17,13 +17,15 @@
 		</div>
 	</form>
 </div>
-<div class="grid-stack" data-gs-width="12">
+<div class="grid-stack card-widgets" data-gs-width="12">
 	<div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" [attr.id]="'grid-'+i" [attr.data-gs-x]="item.row" [attr.data-gs-y]="item.col" [attr.data-gs-width]="item.sizeX"
 	     [attr.data-gs-height]="item.sizeY" *ngFor="#item of standardItems; #i = index" data-gs-auto-position="true">
 		<div class="grid-stack-item-content">
 			<div class="card" [ngClass]="{kibanawidget: item.type == 'iframe'}">
 				<div class="card-header">
-					{{item.name}}
+					<div class="card-title">
+						<h5 class="flight-card-title">{{item.name}}</h5>
+					</div>
 				</div>
 				<div class="card-content" style="height: 90%">
 						<kibana [url]="item.url" [index]="i" *ngIf="item.type == 'iframe'"></kibana>
